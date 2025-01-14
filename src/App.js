@@ -1,17 +1,15 @@
 import React from "react";
-import Login from "./Composant/LOGIN/Login";
-import Produit from "./Composant/LIST/Produit";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const App = () => {
+
+import Accueil from"./Composant/accueil";
+function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/products" element={<Produit />} />
-      </Routes>
+        {/* Route pour la page de connexion */}
+        <Route path="/" element={<Accueil />} />      </Routes>
     </Router>
   );
-};
-
+}
 export default App;
