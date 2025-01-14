@@ -8,14 +8,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
   }
   
   .container {
-    width: 80%;
+    width: 90%; /* Plus large pour occuper une grande partie de la page */
+    height: 90%; /* Hauteur augmentée */
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   /* Titre */
@@ -23,18 +28,20 @@ body {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 28px; /* Titre plus grand */
   }
   
   /* Table */
   table {
     width: 100%;
+    height: 100%; /* Prend toute la hauteur disponible */
     border-collapse: collapse;
     margin-top: 10px;
+    font-size: 18px; /* Texte plus grand */
   }
   
   th, td {
-    padding: 12px 15px;
+    padding: 15px;
     text-align: left;
   }
   
@@ -42,32 +49,39 @@ body {
     background-color: #4caf50;
     color: white;
     font-weight: bold;
+    font-size: 20px; /* Texte des en-têtes agrandi */
   }
   
+  td {
+    border: 1px solid #ddd;
+  }
+  
+  /* Alternance des lignes */
   tr:nth-child(even) {
     background-color: #f9f9f9;
   }
   
   tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Cellules */
-  td {
-    border: 1px solid #ddd;
+    background-color: #eaeaea;
   }
   
   /* Boutons ou liens */
   button {
-    padding: 8px 12px;
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
     background-color: #4caf50;
     color: white;
+    font-size: 16px;
     cursor: pointer;
   }
   
   button:hover {
     background-color: #45a049;
+  }
+  
+  /* Ajustement des cellules pour que le tableau soit plus imposant */
+  tbody tr {
+    height: 60px; /* Hauteur des lignes augmentée */
   }
   
